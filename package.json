@@ -1,13 +1,13 @@
 {
   "name": "observe-path",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ES6 based cooperative path change observation",
   "scripts": {
     "test": "babel-node test/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://www.github.com/jka6502/observer-path.git"
+    "url": "https://www.github.com/jka6502/observe-path.git"
   },
   "main": "lib/path.js",
   "keywords": [
