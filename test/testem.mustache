@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+
+		<title>Test'em</title>
+
+		<link rel="stylesheet" href="/testem/mocha.css">
+		{{#styles}}<link rel="stylesheet" href="{{.}}">{{/styles}}
+
+		<script src='../node_modules/babelise/babelise.js'></script>
+
+
+		<script src="/testem/mocha.js"></script>
+		<script src="/testem.js"></script>
+		<script>mocha.setup('bdd')</script>
+
+		<script type='module'>
+			System.baseURL = '/';
+
+			System.paths['should/should'] = '/node_modules/should/should.js';
+			System.paths['lib/'] = '/lib/';
+
+
+			Promise.all([
+				{{#serve_files}}'{{{src}}}',{{/serve_files}}
+			].map(function(file) {
+					return System.import(file.substring(0, file.length - 3));
+			})).then(function() {
+				mocha.run();
+			});
+
+		</script>
+
+		<style>
+			html {
+				background: #333;
+				color: #eee;
+			}
+
+			html #mocha-stats em {
+				color: white;
+			}
+
+			html #mocha-stats canvas {
+				border-radius: 50%;
+				background: #777;
+			}
+
+			html #mocha .test pre {
+				border: 1px solid #444;
+				border-top: none;
+				border-left: none;
+				box-shadow: inset 2px 2px 3px #222;
+				-webkit-box-shadow: inset 2px 2px 3px #222;
+				-moz-box-shadow: inset 2px 2px 3px #222;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="mocha"></div>
+
+	</body>
+
+</html>

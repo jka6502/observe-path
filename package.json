@@ -1,0 +1,32 @@
+{
+  "name": "observe-path",
+  "version": "0.1.0",
+  "description": "ES6 based cooperative path change observation",
+  "scripts": {
+    "test": "babel-node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/jka6502/observer-path.git"
+  },
+  "main": "lib/path.js",
+  "keywords": [
+    "path",
+    "observe",
+    "watch",
+    "change",
+    "property"
+  ],
+  "author": "James Andrews <jka6502@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babelise": "^1.0.3",
+    "glob": "^5.0.10",
+    "mocha": "^2.2.5",
+    "should": "^6.0.3",
+    "testem": "^0.8.3"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
