@@ -60,6 +60,31 @@ describe('Observer', () => {
 
 	});
 
+	it('should chain a setter from an observed property\'s prototype chain', () => {
+
+		var parent = {}, called = 0;
+
+		function get() {}
+		function set(next) { called++; }
+
+		Object.defineProperty(parent, 'a', {
+			enumerable:		true,
+			configurable:	true,
+			get:			get,
+			set:			set
+		});
+
+		var object = Object.create(parent);
+
+		function observer(object, value) {}
+
+		Observer.observe(object, 'a', observer);
+
+		object.a = 12;
+		called.should.equal(1);
+
+	});
+
 
 	it('should observe changes to a property', () => {
 

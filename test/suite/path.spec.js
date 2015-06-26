@@ -29,7 +29,7 @@ describe('Path', () => {
 			object	= { a: { b: { c: 7 } } },
 			value	= null;
 
-		function change(old, replacement) {
+		function change(replacement, old) {
 			value = replacement;
 		}
 
@@ -47,7 +47,7 @@ describe('Path', () => {
 			object	= { a: { b: { c: 7 } } },
 			value	= null;
 
-		function change(old, replacement) {
+		function change(replacement, old) {
 			value = replacement;
 		}
 
@@ -65,7 +65,7 @@ describe('Path', () => {
 			object	= { a: { b: { c: 7 } } },
 			value	= null;
 
-		function change(old, replacement) {
+		function change(replacement, old) {
 			value = replacement;
 		}
 
@@ -84,7 +84,7 @@ describe('Path', () => {
 			object	= { a: { b: { c: 7 } } },
 			value	= null;
 
-		function change(old, replacement) {
+		function change(replacement, old) {
 			value = replacement;
 		}
 
@@ -104,7 +104,7 @@ describe('Path', () => {
 			value	= null,
 			secret	= {};
 
-		function change(old, replacement) {
+		function change(replacement, old) {
 			changes++;
 			value = replacement;
 		}
@@ -138,11 +138,11 @@ describe('Path', () => {
 			value1		= path1.get(object),
 			value2		= path2.get(object);
 
-		function change1(old, replacement) {
+		function change1(replacement, old) {
 			value1 = replacement;
 		}
 
-		function change2(old, replacement) {
+		function change2(replacement, old) {
 			value2 = replacement;
 		}
 
@@ -177,7 +177,7 @@ describe('Path', () => {
 			object		= { a: { b: { c: 7 } } },
 			value		= path.get(object);
 
-		function change(old, replacement) {
+		function change(replacement, old) {
 			value = replacement;
 		}
 
@@ -202,11 +202,11 @@ describe('Path', () => {
 			changes1	= 0,
 			changes2	= 0;
 
-		function change1(old, replacement) {
+		function change1(replacement, old) {
 			changes1++;
 		}
 
-		function change2(old, replacement) {
+		function change2(replacement, old) {
 			changes2++;
 		}
 
@@ -242,7 +242,7 @@ describe('Path', () => {
 			object	= { a: { b: { c: 7 } } },
 			value	= null;
 
-		function change(old, replacement) {
+		function change(replacement, old) {
 			value = replacement;
 		}
 
@@ -274,12 +274,12 @@ describe('Path', () => {
 			changes1	= 0,
 			changes2	= 0;
 
-		function change1(old, replacement) {
+		function change1(replacement, old) {
 			value1 = replacement;
 			changes1++;
 		}
 
-		function change2(old, replacement) {
+		function change2(replacement, old) {
 			value2 = replacement;
 			changes2++;
 		}
@@ -314,7 +314,7 @@ describe('Path', () => {
 			object		= { a: { b: { c: 7 } } },
 			value		= path.get(object);
 
-		function change(old, replacement) {
+		function change(replacement, old) {
 			value = replacement;
 		}
 
@@ -335,11 +335,11 @@ describe('Path', () => {
 			value1		= path1.get(object),
 			value2		= path2.get(object);
 
-		function change1(old, replacement) {
+		function change1(replacement, old) {
 			value1 = replacement;
 		}
 
-		function change2(old, replacement) {
+		function change2(replacement, old) {
 			value2 = replacement;
 		}
 

@@ -1,6 +1,6 @@
 {
   "name": "observe-path",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "ES6 based cooperative path change observation",
   "scripts": {
     "test": "babel-node test/test.js"
